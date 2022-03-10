@@ -1,0 +1,52 @@
+.card-flip {
+  perspective: 1000px;
+  &:hover .flip,
+  &.hover .flip {
+    transform: rotateY(180deg);
+  }
+  padding-top: 30px;
+}
+
+.card-flip,
+.front,
+.back {
+  width: 90%;
+  height: 480px;
+}
+
+.flip {
+  transition: 1.5s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.information {
+  display: flex;
+  justify-content: center;
+}
+
+.card-title {
+  font-family: 'Dosis', sans-serif;
+}
+
+.card-text {
+  font-family: 'Dosis', sans-serif;
+  padding-left: 10px;
+}
