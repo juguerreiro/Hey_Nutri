@@ -21,23 +21,27 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+
+     <%= f.input :age,
+            :collection => 18..100,
+            :label => 'Age ',
+            placeholder: "Please, select your Age",
+            :style => "width: 85px !important" %>
+
     <%= f.input :height,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "Height" },  
                 placeholder: "Please, select your height"%>
-
-                <%= f.input :age_from,
-            :collection => 18..60,
-            :selected => 18,
-            :label => 'Age from',
-            :style => "width: 85px !important"%>
+    
+    
     <%= f.input :weight,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "weight" },  
                 placeholder: "Please, select your weight"%>
    <%= f.input :comorbidity, :collection => %w[None Anemy Obesity] %>   
+     <%= f.input :gender, as: :radio_buttons, collection: [['0', 'female'], ['1', 'male']], label_method: :second, value_method: :first %>
                 
             
   </div>
