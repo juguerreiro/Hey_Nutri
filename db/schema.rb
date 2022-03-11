@@ -10,10 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_10_203810) do
+ActiveRecord::Schema.define(version: 2022_03_11_155153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "carbs", force: :cascade do |t|
+    t.string "name"
+    t.integer "calories"
+    t.integer "sugar"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "fibras", force: :cascade do |t|
+    t.string "name"
+    t.integer "calories"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "meals", force: :cascade do |t|
+    t.bigint "protein_id", null: false
+    t.bigint "carb_id", null: false
+    t.bigint "fibra_id", null: false
+    t.bigint "user_id", null: false
+    t.integer "calories_total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["carb_id"], name: "index_meals_on_carb_id"
+    t.index ["fibra_id"], name: "index_meals_on_fibra_id"
+    t.index ["protein_id"], name: "index_meals_on_protein_id"
+    t.index ["user_id"], name: "index_meals_on_user_id"
+  end
+
+  create_table "proteins", force: :cascade do |t|
+    t.string "name"
+    t.integer "calories"
+    t.integer "iron"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -33,4 +70,8 @@ ActiveRecord::Schema.define(version: 2022_03_10_203810) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "meals", "carbs"
+  add_foreign_key "meals", "fibras"
+  add_foreign_key "meals", "proteins"
+  add_foreign_key "meals", "users"
 end
