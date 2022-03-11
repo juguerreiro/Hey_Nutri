@@ -4,8 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :email, uniqueness: true
 
-  attr_accessor :email, :password, :password_confirmation, :name, :height, :weight, :comorbidity, :age, :gender
+
+  # attr_accessor :email, :password, :password_confirmation, :name, :height, :weight, :comorbidity, :age, :gender
+
   has_many :meals
+
+  validates :email, :uniqueness => {:allow_blank => true}
 end
