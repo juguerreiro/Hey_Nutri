@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   attr_accessible :email, :password, :password_confirmation, :name, :height, :weight, :comorbidity, :age, :gender
+  has_many :meals
 end
