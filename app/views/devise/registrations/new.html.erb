@@ -4,12 +4,14 @@
       <div class="col-12 col-sm-4">
         <div class="form-login">
           <h2>Sign up</h2>
-          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %> 
             <%= f.error_notification %>
             <div class="form-inputs">  
+            <div class="horizontal-group">
+                <%= f.input :gender, as: :radio_buttons, collection: [['0', 'female'], ['1', 'male']], label_method: :second, value_method: :first %>
+              <div>
               <div class="horizontal-group">   
-               
-                  <div class="form-group left">   
+                                <div class="form-group left">   
                     <%= f.input :name,
                                   required: true,
                                   input_html: { autocomplete: "Fullname" },
@@ -23,45 +25,55 @@
                                   input_html: { autocomplete: "email" },
                                   placeholder: "email@email.com"%>
                   </div>
-                </div>
+              </div>
               
-                <div class="horizontal-group">
-                      <div class="form-group left">
-                        <%= f.input :password,
-                                    required: true,
-                                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                                    input_html: { autocomplete: "new-password" } %>
-                      </div>
-
-                     <div class="form-group right">
-                        <%= f.input :password_confirmation,
-                                    required: true,
-                                    input_html: { autocomplete: "new-password" } %>
-                     </div>
+              <div class="horizontal-group">
+                <div class="form-group left">
+                      <%= f.input :height,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "Height" },
+                          placeholder: "Please, select your height"%>
                 </div>
-             
+                <div class="form-group right">
+                  <%= f.input :weight,
+                              required: true,
+                              autofocus: true,
+                              input_html: { autocomplete: "weight" },
+                              placeholder: "Please, select your weight"%>
+                </div>
+              </div>
+
+              <div class="horizontal-group">
+                <div class="form-group left">
+                  <%= f.input :age,
+                              :collection => 18..100,
+                              :label => 'Age ',
+                              placeholder: "Please, select your Age",
+                              :style => "width: 85px !important" %>
+                </div>
+                <div class="form-group right">
+                  <%= f.input :comorbidity, :collection => %w[None Aneemia Obesity] %>
+                </div>
+              </div>
+              
+              
+              <div class="horizontal-group">
+                <div class="form-group left">
+                  <%= f.input :password,
+                              required: true,
+                              hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                              input_html: { autocomplete: "new-password" } %>
+                </div>
+
+                <div class="form-group right">
+                  <%= f.input :password_confirmation,
+                              required: true,
+                              input_html: { autocomplete: "new-password" } %>
+                </div>
+              </div>
 
               
-                <%= f.input :height,
-                            required: true,
-                            autofocus: true,
-                            input_html: { autocomplete: "Height" },
-                            placeholder: "Please, select your height"%>
-
-
-                <%= f.input :weight,
-                            required: true,
-                            autofocus: true,
-                            input_html: { autocomplete: "weight" },
-                            placeholder: "Please, select your weight"%>
-
-                <%= f.input :age,
-                            :collection => 18..100,
-                            :label => 'Age ',
-                            placeholder: "Please, select your Age",
-                            :style => "width: 85px !important" %>
-              <%= f.input :comorbidity, :collection => %w[None Aneemia Obesity] %>
-              <%= f.input :gender, as: :radio_buttons, collection: [['0', 'female'], ['1', 'male']], label_method: :second, value_method: :first %>
 
             </div>
           
