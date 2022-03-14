@@ -1,0 +1,17 @@
+<h1>Hi, <%= current_user.name %>, this is your page:</h1>
+
+<p>You have 3 option for lunch:</p>
+
+<ul>
+  <% @lunch.each do |meal| %>
+    <li>Protein:<%=meal.protein.name%>, Carbs:<%= meal.carb.name %>, Fiber:<%= meal.fibra.name %>, Calories total: <%= meal.calories_total %></li>
+  <% end %>
+</ul>
+
+<p>You have 3 option for dinner:</p>
+
+<ul>
+  <% @dinner.each do |meal| %>
+    <li>Protein:<%=meal.protein.name%>, Carbs:<%= meal.carb.name %>, Fiber:<%= meal.fibra.name %>, Calories total: <%= meal.calories_total %></li>
+  <% end %>
+</ul>
