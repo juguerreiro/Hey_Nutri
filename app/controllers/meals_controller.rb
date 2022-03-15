@@ -20,7 +20,7 @@ class MealsController < ApplicationController
         @lunch << meal
       end
 
-    elsif current_user.comorbidity.downcase == "anemia"
+    elsif current_user.comorbidity.downcase == "aneemia"
       @lunch = []
       7.times do
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
@@ -73,7 +73,7 @@ class MealsController < ApplicationController
         @dinner << meal
       end
 
-    elsif current_user.comorbidity.downcase == "anemia"
+    elsif current_user.comorbidity.downcase == "aneemia"
       @dinner = []
       7.times do |dinner|
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
@@ -90,7 +90,7 @@ class MealsController < ApplicationController
         @dinner << meal
       end
 
-    elsif current_user.comorbidity.downcase == "obesity"
+    elsif current_user.comorbidity.downcase  == "obesity"
       @dinner = []
       7.times do |dinner|
         protein = Protein.find_by_sql("SELECT * FROM proteins").sample
