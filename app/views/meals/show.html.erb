@@ -1,29 +1,84 @@
-<h1>Hi, <%= current_user.name %>, this is your page:</h1>
 
 <div class="container">
-  <div class="skill-card">
-    <header class="skill-card__header">Lunch</header>
+<h1 class="subtitle">Hi <%= current_user.name %>! This is your plan:</h1>
+
+  <!--------- MONDAY -------------------------------------------------------------------------->
+  <div class="skill-card mx-auto my-5 blue">
+    <header class="skill-card__header">Monday</header>
     <section class="skill-card__body">
-      <h2 class="skill-card__title">Lunch</h2>
       <ul class="skill-card__knowledge">
-         <% @lunch.each do |meal| %>
-          <li>Protein:<%=meal.protein.name%>, Carbs:<%= meal.carb.name %>, Fiber:<%= meal.fibra.name %>, Calories total: <%= meal.calories_total %></li>
-        <% end %>
+          <li><strong>Breakfast</strong></li>
+          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
+          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
       </ul>
     </section>
   </div>
-</div>
 
-<div class="container">
-   <div class="skill-card">
-    <header class="skill-card__header mx-auto d-block"><img src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1647310477/WhatsApp_Image_2022-03-14_at_23.10.56_pme4ed.jpg" alt=""></header>
+  <!--------- TUESDAY -------------------------------------------------------------------------->
+  <div class="skill-card mx-auto my-5 red">
+    <header class="skill-card__header">Tuesday</header>
     <section class="skill-card__body">
-      <h2 class="skill-card__title">Dinner</h2>
       <ul class="skill-card__knowledge">
-         <% @dinner.each do |meal| %>
-          <li>Protein:<%=meal.protein.name%>, Carbs:<%= meal.carb.name %>, Fiber:<%= meal.fibra.name %>, Calories total: <%= meal.calories_total %></li>
-        <% end %>
+          <li><strong>Breakfast</strong></li>
+          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
+          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
       </ul>
+    </section>
+  </div>
+
+  <!--------- WEDNESDAY -------------------------------------------------------------------------->
+  <div class="skill-card mx-auto my-5">
+    <header class="skill-card__header">Wednesday</header>
+    <section class="skill-card__body">
+      <ul class="skill-card__knowledge">
+          <li><strong>Breakfast</strong></li>
+          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
+          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
+      </ul>
+    </section>
+  </div>
+
+  <!--------- THURSDAY -------------------------------------------------------------------------->
+  <div class="skill-card mx-auto my-5">
+    <header class="skill-card__header">Thursday</header>
+    <section class="skill-card__body">
+      <ul class="skill-card__knowledge">
+          <li><strong>Breakfast</strong></li>
+          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
+          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
+      </ul>
+    </section>
+  </div>
+
+  <!--------- FRIDAY -------------------------------------------------------------------------->
+  <div class="skill-card mx-auto my-5">
+    <header class="skill-card__header">Friday</header>
+    <section class="skill-card__body">
+      <ul class="skill-card__knowledge">
+          <li><strong>Breakfast</strong></li>
+          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
+          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
+      </ul>
+    </section>
+  </div>
+
+  <!--------- SATURDAY -------------------------------------------------------------------------->
+  <div class="skill-card mx-auto my-5">
+    <header class="skill-card__header">Saturday</header>
+    <section class="skill-card__body">
+      <ul class="skill-card__knowledge">
+          <li><strong>Breakfast</strong></li>
+          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
+          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
+      </ul>
+    </section>
+  </div>
+
+   <!--------- Sunday -------------------------------------------------------------------------->
+  <div class="skill-card mx-auto my-35">
+    <header class="skill-card__header">Sunday</header>
+    <section class="skill-card__body skill-card__knowledge">
+        <img src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1647368616/avocado_gif-url_la3w8w.gif" class="rounded mx-auto d-block max-width: 10%; height: 10%; object-fit: cover" alt="">
     </section>
   </div>
 </div>

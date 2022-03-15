@@ -5,7 +5,7 @@ class MealsController < ApplicationController
     # LUNCH
     if current_user.comorbidity == "None"
       @lunch = []
-      3.times do |lunch|
+      7.times do |lunch|
         protein = Protein.find(Protein.pluck(:id).sample)
         carb = Carb.find(Carb.pluck(:id).sample)
         fibra = Fibra.find(Fibra.pluck(:id).sample)
@@ -22,7 +22,7 @@ class MealsController < ApplicationController
 
     elsif current_user.comorbidity == "Anemia"
       @lunch = []
-      3.times do |lunch|
+      7.times do |lunch|
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
         carb = Carb.find_by_sql("SELECT * FROM carbs").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
@@ -39,7 +39,7 @@ class MealsController < ApplicationController
 
     elsif current_user.comorbidity == "obesity"
       @dinner = []
-      3.times do |dinner|
+      7.times do |dinner|
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
         carb = Carb.find_by_sql("SELECT * FROM carbs").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
@@ -59,7 +59,7 @@ class MealsController < ApplicationController
  # DINNER
     if current_user.comorbidity == "None"
       @dinner = []
-      3.times do |dinner|
+      7.times do |dinner|
         protein = Protein.find(Protein.pluck(:id).sample)
         carb = Carb.find(Carb.pluck(:id).sample)
         fibra = Fibra.find(Fibra.pluck(:id).sample)
@@ -76,7 +76,7 @@ class MealsController < ApplicationController
 
     elsif current_user.comorbidity == "Anemia"
       @dinner = []
-      3.times do |dinner|
+      7.times do |dinner|
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
         carb = Carb.find_by_sql("SELECT * FROM carbs").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
@@ -93,7 +93,7 @@ class MealsController < ApplicationController
 
     elsif current_user.comorbidity == "obesity"
       @dinner = []
-      3.times do |dinner|
+      7.times do |dinner|
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
         carb = Carb.find_by_sql("SELECT * FROM carbs").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
