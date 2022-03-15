@@ -3,9 +3,9 @@ class MealsController < ApplicationController
     #-------------------------------------------------------------------------------------------------------------------------
 
     # LUNCH
-    if current_user.comorbidity == "None"
+    if current_user.comorbidity.downcase == "none"
       @lunch = []
-      7.times do |lunch|
+      7.times do
         protein = Protein.find(Protein.pluck(:id).sample)
         carb = Carb.find(Carb.pluck(:id).sample)
         fibra = Fibra.find(Fibra.pluck(:id).sample)
@@ -20,14 +20,13 @@ class MealsController < ApplicationController
         @lunch << meal
       end
 
-    elsif current_user.comorbidity == "Anemia"
+    elsif current_user.comorbidity.downcase == "anemia"
       @lunch = []
-      7.times do |lunch|
+      7.times do
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
         carb = Carb.find_by_sql("SELECT * FROM carbs").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
-
-        meal= Meal.create!(
+        meal = Meal.create!(
           protein_id: protein.id,
           carb_id: carb.id,
           fibra_id: fibra.id,
@@ -37,14 +36,14 @@ class MealsController < ApplicationController
         @lunch << meal
       end
 
-    elsif current_user.comorbidity == "obesity"
+    elsif current_user.comorbidity.downcase == "obesity"
       @lunch = []
-      7.times do |lunch|
+      7.times do
         protein = Protein.find_by_sql("SELECT * FROM proteins").sample
         carb = Carb.find_by_sql("SELECT * FROM carbs WHERE sugar <= 20").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
 
-        meal= Meal.create!(
+        meal = Meal.create!(
           protein_id: protein.id,
           carb_id: carb.id,
           fibra_id: fibra.id,
@@ -57,7 +56,7 @@ class MealsController < ApplicationController
  # ----------------------------------------------------------------------------------------------------------------------
 
  # DINNER
-    if current_user.comorbidity == "None"
+    if current_user.comorbidity.downcase == "none"
       @dinner = []
       7.times do |dinner|
         protein = Protein.find(Protein.pluck(:id).sample)
@@ -74,7 +73,7 @@ class MealsController < ApplicationController
         @dinner << meal
       end
 
-    elsif current_user.comorbidity == "Anemia"
+    elsif current_user.comorbidity.downcase == "anemia"
       @dinner = []
       7.times do |dinner|
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
@@ -91,7 +90,7 @@ class MealsController < ApplicationController
         @dinner << meal
       end
 
-    elsif current_user.comorbidity == "obesity"
+    elsif current_user.comorbidity.downcase == "obesity"
       @dinner = []
       7.times do |dinner|
         protein = Protein.find_by_sql("SELECT * FROM proteins").sample
