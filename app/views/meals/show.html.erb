@@ -1,17 +1,29 @@
 <h1>Hi, <%= current_user.name %>, this is your page:</h1>
 
-<p>You have 3 option for lunch:</p>
+<div class="container">
+  <div class="skill-card">
+    <header class="skill-card__header">Lunch</header>
+    <section class="skill-card__body">
+      <h2 class="skill-card__title">Lunch</h2>
+      <ul class="skill-card__knowledge">
+         <% @lunch.each do |meal| %>
+          <li>Protein:<%=meal.protein.name%>, Carbs:<%= meal.carb.name %>, Fiber:<%= meal.fibra.name %>, Calories total: <%= meal.calories_total %></li>
+        <% end %>
+      </ul>
+    </section>
+  </div>
+</div>
 
-<ul>
-  <% @lunch.each do |meal| %>
-    <li>Protein:<%=meal.protein.name%>, Carbs:<%= meal.carb.name %>, Fiber:<%= meal.fibra.name %>, Calories total: <%= meal.calories_total %></li>
-  <% end %>
-</ul>
-
-<p>You have 3 option for dinner:</p>
-
-<ul>
-  <% @dinner.each do |meal| %>
-    <li>Protein:<%=meal.protein.name%>, Carbs:<%= meal.carb.name %>, Fiber:<%= meal.fibra.name %>, Calories total: <%= meal.calories_total %></li>
-  <% end %>
-</ul>
+<div class="container">
+   <div class="skill-card">
+    <header class="skill-card__header mx-auto d-block"><img src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1647310477/WhatsApp_Image_2022-03-14_at_23.10.56_pme4ed.jpg" alt=""></header>
+    <section class="skill-card__body">
+      <h2 class="skill-card__title">Dinner</h2>
+      <ul class="skill-card__knowledge">
+         <% @dinner.each do |meal| %>
+          <li>Protein:<%=meal.protein.name%>, Carbs:<%= meal.carb.name %>, Fiber:<%= meal.fibra.name %>, Calories total: <%= meal.calories_total %></li>
+        <% end %>
+      </ul>
+    </section>
+  </div>
+</div>
