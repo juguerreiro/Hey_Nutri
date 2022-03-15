@@ -38,10 +38,10 @@ class MealsController < ApplicationController
       end
 
     elsif current_user.comorbidity == "obesity"
-      @dinner = []
-      7.times do |dinner|
-        protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
-        carb = Carb.find_by_sql("SELECT * FROM carbs").sample
+      @lunch = []
+      7.times do |lunch|
+        protein = Protein.find_by_sql("SELECT * FROM proteins").sample
+        carb = Carb.find_by_sql("SELECT * FROM carbs WHERE sugar <= 20").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
 
         meal= Meal.create!(
@@ -51,7 +51,7 @@ class MealsController < ApplicationController
           user_id: current_user.id,
           calories_total: protein.calories + carb.calories + fibra.calories
         )
-        @dinner << meal
+        @lunch << meal
       end
     end
  # ----------------------------------------------------------------------------------------------------------------------
@@ -94,8 +94,8 @@ class MealsController < ApplicationController
     elsif current_user.comorbidity == "obesity"
       @dinner = []
       7.times do |dinner|
-        protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
-        carb = Carb.find_by_sql("SELECT * FROM carbs").sample
+        protein = Protein.find_by_sql("SELECT * FROM proteins").sample
+        carb = Carb.find_by_sql("SELECT * FROM carbs WHERE sugar <= 20").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
 
         meal= Meal.create!(
