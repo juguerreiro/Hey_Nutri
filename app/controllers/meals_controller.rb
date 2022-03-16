@@ -21,7 +21,7 @@ class MealsController < ApplicationController
         
       end
 
-    elsif current_user.comorbidity == "Anemia"
+    elsif current_user.comorbidity == "Aneemia"
       @lunch = []
       7.times do |lunch|
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2").sample
@@ -38,7 +38,7 @@ class MealsController < ApplicationController
         @lunch << meal
       end
 
-    elsif current_user.comorbidity == "obesity"
+    elsif current_user.comorbidity == "Obesity"
       @dinner = []
       
       7.times do |dinner|
