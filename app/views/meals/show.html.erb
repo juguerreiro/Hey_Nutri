@@ -1,6 +1,6 @@
 
 <div class="container">
-<h1 class="subtitle">Hi <%= current_user.name %>! This is your plan:</h1>
+<h1 class="subtitle">Hi <%= current_user.name %>! This is your plan:     . YOUR BMI is <%=  current_user.imc.to_d.round(2,:truncate).to_f %> </h1> 
 
   <!--------- MONDAY -------------------------------------------------------------------------->
   <div class="skill-card mx-auto my-5 blue">
@@ -81,4 +81,7 @@
         <img src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1647368616/avocado_gif-url_la3w8w.gif" class="rounded mx-auto d-block max-width: 10%; height: 10%; object-fit: cover" alt="">
     </section>
   </div>
-</div>
+
+
+
+ 

@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :meals
+
+  def imc     
+   return imc = (weight/ (height * height))*10000
+  end
 end
