@@ -1,84 +1,230 @@
 
 <div class="container">
-<h1 class="subtitle">Hi <%= current_user.name %>! This is your plan:</h1>
+  <h1 class="subtitle">Hi <%= current_user.name %>! This is your plan:</h1>
 
   <!--------- MONDAY -------------------------------------------------------------------------->
-  <div class="skill-card mx-auto my-5 blue">
-    <header class="skill-card__header">Monday</header>
-    <section class="skill-card__body">
-      <ul class="skill-card__knowledge">
-          <li><strong>Breakfast</strong></li>
-          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
-          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
-      </ul>
-    </section>
+  <div class="card-principal">
+    <div class="row">
+      <div class="col-4">
+        <ul>
+          <p class="snack">Breakfast</p>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col-4 border-end border-start">
+        <ul>
+          <p class="snack">Lunch</p>
+          <% @meals_week[0].each do |meal| %>
+            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <p class="snack">dinner</p>
+          <% @meals_week[1].each do |meal| %>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <!--------- TUESDAY -------------------------------------------------------------------------->
-  <div class="skill-card mx-auto my-5 red">
-    <header class="skill-card__header">Tuesday</header>
-    <section class="skill-card__body">
-      <ul class="skill-card__knowledge">
-          <li><strong>Breakfast</strong></li>
-          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
-          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
-      </ul>
-    </section>
+   <!--------- TUESDAY -------------------------------------------------------------------------->
+  <div class="card-principal">
+    <div class="row">
+      <div class="col-4">
+        <ul>
+          <p class="snack">Breakfast</p>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col-4 border-end border-start">
+        <ul>
+          <p class="snack">Lunch</p>
+          <% @meals_week[2].each do |meal| %>
+            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <p class="snack">dinner</p>
+          <% @meals_week[3].each do |meal| %>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <!--------- WEDNESDAY -------------------------------------------------------------------------->
-  <div class="skill-card mx-auto my-5">
-    <header class="skill-card__header">Wednesday</header>
-    <section class="skill-card__body">
-      <ul class="skill-card__knowledge">
-          <li><strong>Breakfast</strong></li>
-          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
-          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
-      </ul>
-    </section>
+   <!--------- WEDNESDAY-------------------------------------------------------------------------->
+  <div class="card-principal">
+    <div class="row">
+      <div class="col-4">
+        <ul>
+          <p class="snack">Breakfast</p>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col-4 border-end border-start">
+        <ul>
+          <p class="snack">Lunch</p>
+          <% @meals_week[4].each do |meal| %>
+            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <p class="snack">dinner</p>
+          <% @meals_week[5].each do |meal| %>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <!--------- THURSDAY -------------------------------------------------------------------------->
-  <div class="skill-card mx-auto my-5">
-    <header class="skill-card__header">Thursday</header>
-    <section class="skill-card__body">
-      <ul class="skill-card__knowledge">
-          <li><strong>Breakfast</strong></li>
-          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
-          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
-      </ul>
-    </section>
+   <!--------- TUESDAY -------------------------------------------------------------------------->
+  <div class="card-principal">
+    <div class="row">
+      <div class="col-4">
+        <ul>
+          <p class="snack">Breakfast</p>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col-4 border-end border-start">
+        <ul>
+          <p class="snack">Lunch</p>
+          <% @meals_week[6].each do |meal| %>
+            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <p class="snack">dinner</p>
+          <% @meals_week[7].each do |meal| %>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <!--------- FRIDAY -------------------------------------------------------------------------->
-  <div class="skill-card mx-auto my-5">
-    <header class="skill-card__header">Friday</header>
-    <section class="skill-card__body">
-      <ul class="skill-card__knowledge">
-          <li><strong>Breakfast</strong></li>
-          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
-          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
-      </ul>
-    </section>
+   <!--------- THURSDAY-------------------------------------------------------------------------->
+  <div class="card-principal">
+    <div class="row">
+      <div class="col-4">
+        <ul>
+          <p class="snack">Breakfast</p>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col-4 border-end border-start">
+        <ul>
+          <p class="snack">Lunch</p>
+          <% @meals_week[8].each do |meal| %>
+            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <p class="snack">dinner</p>
+          <% @meals_week[9].each do |meal| %>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <!--------- SATURDAY -------------------------------------------------------------------------->
-  <div class="skill-card mx-auto my-5">
-    <header class="skill-card__header">Saturday</header>
-    <section class="skill-card__body">
-      <ul class="skill-card__knowledge">
-          <li><strong>Breakfast</strong></li>
-          <li><strong>Lunch: </strong><%=@lunch.sample.protein.name%>, <%=@lunch.sample.carb.name%> e <%=@lunch.sample.fibra.name%></li>
-          <li><strong>Dinner: </strong><%=@dinner.sample.protein.name%>, <%=@dinner.sample.carb.name%> e <%=@dinner.sample.fibra.name%></li>
-      </ul>
-    </section>
+   <!--------- FRIDAY-------------------------------------------------------------------------->
+  <div class="card-principal">
+    <div class="row">
+      <div class="col-4">
+        <ul>
+          <p class="snack">Breakfast</p>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col-4 border-end border-start">
+        <ul>
+          <p class="snack">Lunch</p>
+          <% @meals_week[10].each do |meal| %>
+            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <p class="snack">dinner</p>
+          <% @meals_week[11].each do |meal| %>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 
-   <!--------- Sunday -------------------------------------------------------------------------->
-  <div class="skill-card mx-auto my-35">
-    <header class="skill-card__header">Sunday</header>
-    <section class="skill-card__body skill-card__knowledge">
-        <img src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1647368616/avocado_gif-url_la3w8w.gif" class="rounded mx-auto d-block max-width: 10%; height: 10%; object-fit: cover" alt="">
-    </section>
+   <!--------- SATURDAY-------------------------------------------------------------------------->
+  <div class="card-principal">
+    <div class="row">
+      <div class="col-4">
+        <ul>
+          <p class="snack">Breakfast</p>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col-4 border-end border-start">
+        <ul>
+          <p class="snack">Lunch</p>
+          <% @meals_week[12].each do |meal| %>
+            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <p class="snack">dinner</p>
+          <% @meals_week[13].each do |meal| %>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
+
+   <!--------- SUNDAY-------------------------------------------------------------------------->
+  <div class="card-principal">
+    <div class="row">
+      <div class="col">
+        <p>Have fun</p>
+          <div class="center">
+            <img src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1647368616/avocado_gif-url_la3w8w.gif" alt="Have fun!" style="width: 20%;">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
 </div>
