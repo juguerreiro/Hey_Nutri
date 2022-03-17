@@ -1,26 +1,47 @@
 
 <!-------------------Profile----------------------------------------------------------------------->  
  <div class="container">
-  <div class="card-product">
-    <img src="https://avatars.githubusercontent.com/u/95770046?v=4" alt="Julia" >
   
-      <div class="card-product-infos">
-        <h2 class="snack"> My profile </h2>
-        <p><ul class="fa-ul">
-          <li><span class="fa-li"><i class="fa-regular fa-id-card"></i></span> Name: <%= current_user.name %> </li>
-          <li><span class="fa-li"><i class="fa-regular fa-calendar"></i></span>Age: <%= current_user.age %> years old</li>
-          <li><span class="fa-li"><i class="fa-solid fa-ruler-vertical"></i></span>Your height: <%= current_user.height%> cm </li>
-          <li><span class="fa-li"><i class="fa-solid fa-weight-scale"></i></span>Your current weight: <%= current_user.height%> kg</li>
-          <li><span class="fa-li"><i class="fa-solid fa-person"></i></span>YouR BMI is <%=  current_user.bmi.to_d.round(2,:truncate).to_f %></li>
-          <li><span class="fa-li"><i class="fa-solid fa-fire"></i></i></span> Your basal metabolism is: <%= current_user.bmr.to_d.round(2,:truncate).to_f%> kcal</li>
-        </ul></p>
+  <div class="wrapper">
+    
+    <div class="profile-card js-profile-card">
+      <div class="profile-card__img">
+        <img src="https://kitt.lewagon.com/placeholder/users/juguerreiro" >
       </div>
+
+       <div class="profile-card__cnt js-profile-cnt">
+          <div class="profile-card__name"><%=current_user.name %></div>
+          <div class="profile-card__txt"><i class="fa-solid fa-calendar"> </i><span><%=current_user.age%> years <span><i class="fa-solid fa-ruler"></i> <%=current_user.height%> cm<span></div>
+         
+      
+
+
+
+      <div class="profile-card-inf">
+        <div class="profile-card-inf__item">
+          <div class="profile-card-inf__title"><%=  current_user.bmi.to_d.round(2,:truncate).to_f %></div>
+          <div class="profile-card-inf__txt">BMI</div>
+        </div>
+
+        <div class="profile-card-inf__item">
+          <div class="profile-card-inf__title"><%= current_user.bmr.to_d.round(2,:truncate).to_f%></div>
+          <div class="profile-card-inf__txt">BMR(kcal)</div>
+        </div>
+
+        <div class="profile-card-inf__item">
+          <div class="profile-card-inf__title"><%=current_user.weight%></div>
+          <div class="profile-card-inf__txt"><i class="fa-solid fa-weight-scale"></i> </div>
+        </div>
+
+      
+      </div>
+
     </div>
   </div>
-
-<div class= "welcome">
-  <h1>Hi <%= current_user.name %>! This is your plan: </h1>
-</div>
+  </div>
+  <div class= "welcome">
+    <h1>Hi <%= current_user.name %>! This is your plan: </h1>
+  </div>
 
   <!--------- MONDAY -------------------------------------------------------------------------->
   <div class="card-principal">
