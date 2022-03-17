@@ -1,9 +1,9 @@
 
-<!-------------------Profile----------------------------------------------------------------------->  
+<!-------------------Profile----------------------------------------------------------------------->
  <div class="container">
-  
+
   <div class="wrapper">
-    
+
     <div class="profile-card js-profile-card">
       <div class="profile-card__img">
         <%= cl_image_tag current_user.photo.key %>
@@ -12,10 +12,6 @@
        <div class="profile-card__cnt js-profile-cnt">
           <div class="profile-card__name"><%=current_user.name %></div>
           <div class="profile-card__txt"><i class="fa-solid fa-calendar"> </i><span><%=current_user.age%> years <span><i class="fa-solid fa-ruler"></i> <%=current_user.height%> cm<span></div>
-         
-      
-
-
 
       <div class="profile-card-inf">
         <div class="profile-card-inf__item">
@@ -33,7 +29,7 @@
           <div class="profile-card-inf__txt"><i class="fa-solid fa-weight-scale"></i> </div>
         </div>
 
-      
+
       </div>
 
     </div>
@@ -44,8 +40,8 @@
   </div>
 
   <!--------- MONDAY -------------------------------------------------------------------------->
-  
-  
+
+
   <div class="card-principal">
     <div class="row">
       <div class="col-4">
@@ -268,6 +264,6 @@
   </div>
 
   <div class="click-here">
-    <p class="text-end">Don't like your weekly meals?<%= link_to "click here", meal_path(current_user), method: :patch, data: { confirm: "Are you sure?", disable_with: "Creating new meals..." }, :class => "btn btn-info" %><i class="fas fa-mouse-pointer"></i></p>
+    <p class="text-end">Don't like your weekly meals? <%= link_to "click here", meal_path(current_user), method: :patch, data: { confirm: "Are you sure?", disable_with: "Creating new meals..." }, :class => "btn btn-info" %><i class="fas fa-mouse-pointer"></i></p>
   </div>
 </div>

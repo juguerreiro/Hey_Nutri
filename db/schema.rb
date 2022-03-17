@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2022_03_15_172521) do
+ActiveRecord::Schema.define(version: 2022_03_17_200917) do
 
 
   # These are extensions that must be enabled in order to support this database
@@ -52,6 +51,16 @@ ActiveRecord::Schema.define(version: 2022_03_15_172521) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "breakfast"
+  end
+
+  create_table "cookers", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.string "phone"
   end
 
   create_table "fibras", force: :cascade do |t|
