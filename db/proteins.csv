@@ -1,17 +1,23 @@
-Nome,Calorias,Proteina,Colesterol,Carboidrato,Fibra,Ferro,Sodio,Gordura
-Contra-Filé,206,22,73,0,0,3,57,12
-Costela,373,28,95,0,0,2,92,27
-Fígado,225,30,60,0,0,6,82,9
-Almondegas,272,19,36,0,0,2,100,16
-Frango Caipira com Pele,243,24,110,0,0,2,56,16
-Frango Caipira sem Pele,196,30,106,0,0,2,56,15
-Frango Assado,187,28,111,0,0,1,70,7
-Hamburguer Grelhado,210,13,59,0,0,3,200,12
-Linguica Grelhada,245,18,76,0,0,1,300,19
-Bisteca Grelhada,280,29,82,0,0,1,51,17
-Pernil Assado,262,32,110,0,0,1,62,14
-Quibe Frito,254,15,38,0,0,2,200,16
-Toucinho,700,27,89,0,0,1,125,64
-Filé de Merluza,122,27,91,0,0,0,40,1
-Salmão Grelhado,243,26,73,0,0,1,96,14
-Camarão Grelhado,100,19,200,0,0,2,300,1
+Nome,Calorias,Proteina,Colesterol,Carboidrato,Fibra,Ferro,Sodio,Gordura,Breakfast
+Tenderloin,206,22,73,0,0,3,57,12,FALSE
+Ribs,373,28,95,0,0,2,92,27,FALSE
+Beef liver,225,30,60,0,0,6,82,9,FALSE
+Meatballs,272,19,36,0,0,2,100,16,FALSE
+Chicken,243,24,110,0,0,2,56,16,FALSE
+Chicken (without skin),196,30,106,0,0,2,56,15,FALSE
+Roast Chicken,187,28,111,0,0,1,70,7,FALSE
+Hamburguer Meat,210,13,59,0,0,3,200,12,FALSE
+Grilled Sausage,245,18,76,0,0,1,300,19,FALSE
+Pork Chop,280,29,82,0,0,1,51,17,FALSE
+Ham,262,32,110,0,0,1,62,14,FALSE
+Kibbeh,254,15,38,0,0,2,200,16,FALSE
+Pork Belly,700,27,89,0,0,1,125,64,FALSE
+Fillet of Hake,122,27,91,0,0,0,40,1,FALSE
+Grilled Salmon,243,26,73,0,0,1,96,14,FALSE
+Grilled Shrimp,100,19,200,0,0,2,300,1,FALSE
+Scrambled Eggs,100,7,100,0,0,1,100,8,TRUE
+Minas Cheese,100,8,40,3,1,1,31,8,TRUE
+Turkey breast,80,10,40,1,0,0,200,1,TRUE
+Mozzarella,200,12,40,2,0,1,200,5,TRUE
+Buffalo Mozzarella,250,15,50,3,0,0,230,6,TRUE
+Ricotta Cheese,50,4,18,1,0,0,8,2,TRUE
