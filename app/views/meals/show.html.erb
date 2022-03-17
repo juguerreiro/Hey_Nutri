@@ -225,7 +225,7 @@
     </div>
   </div>
 
-  <div>
-    <p>if you don't like your weekly meals, please</p><%= link_to "click here", meal_path(current_user), method: :patch, data: { confirm: "Are you sure?", disable_with: "Creating new meals..." } %>
+  <div class="click-here">
+    <p class="text-end">Don't like your weekly meals?<%= link_to "click here", meal_path(current_user), method: :patch, data: { confirm: "Are you sure?", disable_with: "Creating new meals..." }, :class => "btn btn-info" %><i class="fas fa-mouse-pointer"></i></p>
   </div>
 </div>
