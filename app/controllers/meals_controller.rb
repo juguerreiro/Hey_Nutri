@@ -110,6 +110,8 @@ class MealsController < ApplicationController
         @dinner << meal
       end
     end
+    meals_all = current_user.meals
+    @meals_week = meals_all.each_slice(3).to_a
   end
   
 end
