@@ -6,7 +6,7 @@
     
     <div class="profile-card js-profile-card">
       <div class="profile-card__img">
-        <img src="https://kitt.lewagon.com/placeholder/users/juguerreiro" >
+        <%= cl_image_tag current_user.photo.key %>
       </div>
 
        <div class="profile-card__cnt js-profile-cnt">
@@ -44,6 +44,8 @@
   </div>
 
   <!--------- MONDAY -------------------------------------------------------------------------->
+  
+  
   <div class="card-principal">
     <div class="row">
       <div class="col-4">
