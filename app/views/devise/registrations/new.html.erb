@@ -53,11 +53,12 @@
                               :style => "width: 85px !important" %>
                 </div>
                 <div class="form-group right">
-                  <%= f.input :comorbidity, :collection => %w[None Aneemia Obesity] %>
+                  <%= f.input :comorbidity, :collection => %w[None Aneemia Obesity], required: true %>
                 </div>
               </div>
               
-              
+               <%= f.input :photo, as: :file %>
+               
               <div class="horizontal-group">
                 <div class="form-group left">
                   <%= f.input :password,

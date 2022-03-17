@@ -1,8 +1,51 @@
 
-<div class="container">
-  <h1 class="subtitle">Hi <%= current_user.name %>! This is your plan:</h1>
+<!-------------------Profile----------------------------------------------------------------------->  
+ <div class="container">
+  
+  <div class="wrapper">
+    
+    <div class="profile-card js-profile-card">
+      <div class="profile-card__img">
+        <%= cl_image_tag current_user.photo.key %>
+      </div>
+
+       <div class="profile-card__cnt js-profile-cnt">
+          <div class="profile-card__name"><%=current_user.name %></div>
+          <div class="profile-card__txt"><i class="fa-solid fa-calendar"> </i><span><%=current_user.age%> years <span><i class="fa-solid fa-ruler"></i> <%=current_user.height%> cm<span></div>
+         
+      
+
+
+
+      <div class="profile-card-inf">
+        <div class="profile-card-inf__item">
+          <div class="profile-card-inf__title"><%=  current_user.bmi.to_d.round(2,:truncate).to_f %></div>
+          <div class="profile-card-inf__txt">BMI</div>
+        </div>
+
+        <div class="profile-card-inf__item">
+          <div class="profile-card-inf__title"><%= current_user.bmr.to_d.round(2,:truncate).to_f%></div>
+          <div class="profile-card-inf__txt">BMR(kcal)</div>
+        </div>
+
+        <div class="profile-card-inf__item">
+          <div class="profile-card-inf__title"><%=current_user.weight%></div>
+          <div class="profile-card-inf__txt"><i class="fa-solid fa-weight-scale"></i> </div>
+        </div>
+
+      
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <div class= "welcome">
+    <h1>Hi <%= current_user.name %>! This is your plan: </h1>
+  </div>
 
   <!--------- MONDAY -------------------------------------------------------------------------->
+  
+  
   <div class="card-principal">
     <div class="row">
       <div class="col-4">
