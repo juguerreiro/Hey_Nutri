@@ -2,25 +2,28 @@
     overflow: hidden;
     height: 200px;
     background: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    // box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
     display: flex;
     align-items: center;
+    width: 50%;
+    margin: auto;
   }
   
   .card-product img {
     height: 100%;
-    width: 120px;
+    // width: 50%;
     object-fit: cover;
     line-height: 1.4;
     border-radius:0% ;
+    
   }
   
-//   .card-product {
-//     h2{
-//     font-size: 16px;
-//     font-weight: bold;
-//     margin: 0; }
-//   }
+  .card-product {
+    h2{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0; }
+  }
   
   .card-product p {
     font-size: 12px;
@@ -33,5 +36,11 @@
   .card-product .card-product-infos {
         padding: 19px;
     padding-top: 3%;
+  }
+  .welcome {
+    text-align: -webkit-center;
+    font-family: 'League Gothic', sans-serif;
+    color: #146356;
+    font-size: 40px;
   }
   

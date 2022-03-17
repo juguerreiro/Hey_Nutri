@@ -2,7 +2,7 @@
 <!-------------------Profile----------------------------------------------------------------------->  
  <div class="container">
   <div class="card-product">
-    <img src="https://avatars.githubusercontent.com/u/95770046?v=4" alt="Julia" style="width:15%">
+    <img src="https://avatars.githubusercontent.com/u/95770046?v=4" alt="Julia" >
   
       <div class="card-product-infos">
         <h2 class="snack"> My profile </h2>
@@ -11,15 +11,16 @@
           <li><span class="fa-li"><i class="fa-regular fa-calendar"></i></span>Age: <%= current_user.age %> years old</li>
           <li><span class="fa-li"><i class="fa-solid fa-ruler-vertical"></i></span>Your height: <%= current_user.height%> cm </li>
           <li><span class="fa-li"><i class="fa-solid fa-weight-scale"></i></span>Your current weight: <%= current_user.height%> kg</li>
-          <li><span class="fa-li"><i class="fa-solid fa-person"></i></span>YOUR BMI is <%=  current_user.bmi.to_d.round(2,:truncate).to_f %></li>
+          <li><span class="fa-li"><i class="fa-solid fa-person"></i></span>YouR BMI is <%=  current_user.bmi.to_d.round(2,:truncate).to_f %></li>
           <li><span class="fa-li"><i class="fa-solid fa-fire"></i></i></span> Your basal metabolism is: <%= current_user.bmr.to_d.round(2,:truncate).to_f%> kcal</li>
         </ul></p>
       </div>
     </div>
   </div>
 
-
-  <h1 class="subtitle">Hi <%= current_user.name %>! This is your plan: </h1>
+<div class= "welcome">
+  <h1>Hi <%= current_user.name %>! This is your plan: </h1>
+</div>
 
   <!--------- MONDAY -------------------------------------------------------------------------->
   <div class="card-principal">
