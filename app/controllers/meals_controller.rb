@@ -5,7 +5,6 @@ class MealsController < ApplicationController
     @protein_breakfast = Protein.find_by_sql("SELECT * FROM proteins WHERE breakfast = true")
     @carbs_breakfast = Carb.find_by_sql("SELECT * FROM carbs WHERE breakfast = true")
 
-
   end
 
   def update
