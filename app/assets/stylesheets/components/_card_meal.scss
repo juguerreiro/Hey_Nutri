@@ -1,0 +1,45 @@
+.card-meal {
+    -webkit-perspective: 1200px; /* so you get the 3d effect */
+    height: 100px;
+    width: 200px;
+    margin: 20px;
+    padding-top: 100px;
+    position: relative;
+}
+
+.tile {
+    width:200px;
+    height:100px;
+    position: absolute;
+}
+
+.card-meal .front {
+    -webkit-transition-duration: 0.75s;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform-style: preserve-3d; /* otherwise the perspective gets erased, and you lose the 3d */
+    z-index: 2; /* the front needs to be rendered on top of the back */
+}
+
+.card-meal .front .outside,
+.card-meal .front .inside {
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* makes it so that the elements only have a front side */
+}
+
+.card-meal .front .outside {
+    background:red; 
+}
+
+.card-meal .front .inside {
+     background: yellow;
+    -webkit-transform: rotateX(180deg); /* flips the top-inside so its back touches the fronts back */
+}
+
+.in-bottom {
+    background: blue;
+    z-index: 1;
+}
+
+.card-meal.open .front {
+    -webkit-transform: rotateX(180deg); /*rotates the entire front (with the in- and outsides in it) if the class 'open' is added to the card */
+}

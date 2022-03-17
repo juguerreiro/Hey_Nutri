@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :meals
+  has_one_attached :photo
 
   def bmi     
    return bmi = (weight/ (height* height))*10000
