@@ -40,8 +40,132 @@
   </div>
 
   <!--------- MONDAY -------------------------------------------------------------------------->
+<!-- CARD FLIP -->
+  <section>
+    <div class="row cards">
+      <div class="col-lg">
+            <!-- 1 Card Flip -->
+        <div class="card-flip">
+          <div class="flip">
+            <div class="front">
+              <!-- front content -->
+              <div class="card p-3">
+                <img class="rounded card-img-top" src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1646938900/breakfast_yufpmq.jpg" alt="breakfast option1" style="height: 180px; width: 100%; display: block;" data-holder-rendered="true">
+                <div class="card-block">
+                  <h4 class="card-title text-center my-3">Muesli with oats, dates & berries</h4>
+                  <p class="card-text" >Packed with oats, pecans, seeds, dates, puffed wheat and berries, this delicious breakfast muesli will help you to start your day the right way</p>
+                  <div class="button-second w-100 card-text text-center py-2"><i class="fas fa-utensils"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <!-- back content -->
+              <div class="card p-3">
+                <div class="card-block">
+                  <h4 class="card-title"><strong>Recipe</strong></h4>
+                  <h6 class="card-subtitle text-muted">★4.8</h6>
+                </div>
+                <div class="card-block">
+                  <p class="card-text">>Breakfast
+                    <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> 
+                    <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> 
+                    <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> 
+                  </p>
+                  <p class="card-text">Lunch
+                    <% @meals_week[0].each do |meal| %>
+                      <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %>
+                    <% end %></p>
 
+                    <p class="snack">dinner</p>
+                      <% @meals_week[1].each do |meal| %>
+                        <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+                      <% end %>
+                    <div class="information">
+                    <i class="fas fa-clock"></i><p>5min</p>
+                    <i class="fas fa-hat-chef"></i><p>Easy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+            <!-- 2 Card Flip -->
+      <div class="col-lg">
+        <div class="card-flip">
+          <div class="flip">
+            <div class="front">
+              <!-- front content -->
+              <div class="card p-3">
+                <img class="rounded card-img-top" src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1646946720/mexican-beans-and-avo-33f4279_k8jkhm.png" alt="breakfast option1" style="height: 180px; width: 100%; display: block;" data-holder-rendered="true">
+                <div class="card-block">
+                  <h4 class="card-title text-center my-3">Black beans & avocado on toast</h4>
+                  <p class="card-text" >A vibrant Mexican-style breakfast with fresh avocado and black beans. Give yourself a healthy start with our easy vegan beans on toast with a twist</p>
+                  <div class="button-second w-100 card-text text-center py-2"><i class="fas fa-utensils"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <!-- back content -->
+              <div class="card p-3">
+                <div class="card-block">
+                  <h4 class="card-title"><strong>Recipe</strong></h4>
+                  <h6 class="card-subtitle text-muted">★4.5</h6>
+                </div>
+                <div class="card-block">
+                  <p class="card-text"><strong>STEP 1:</strong> Mix the tomatoes, ¼ onion, lime juice and 1 tbsp oil and set aside. Fry the onion add the garlic, fry for 1 min, then add the cumin and chipotle. Tip in the beans and a splash of water. Stir in most of the tomato mixture and cook for 1 min, season well and add most of the coriander.</p>
+                  <p class="card-text"><strong>STEP 2:</strong> Toast the bread and drizzle with the remaining 1 tbsp oil. Put a slice on each plate and pile some beans on top. Arrange some slices of avocado on top, then sprinkle with the remaining tomato mixture and coriander leaves to serve.</p>
+                  <div class="information">
+                    <i class="fas fa-clock"></i><p>5min</p>
+                    <i class="fas fa-hat-chef"></i><p>Easy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <!-- 3 Card Flip -->
+      <div class="col-lg">
+        <div class="card-flip">
+          <div class="flip">
+            <div class="front">
+              <!-- front content -->
+              <div class="card p-3">
+                <img class="rounded card-img-top" src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1646947547/muphim_is26dy.webp" alt="breakfast option1" style="height: 180px; width: 100%; display: block;" data-holder-rendered="true">
+                <div class="card-block">
+                  <h4 class="card-title text-center my-3">Healthy banana muffins</h4>
+                  <p class="card-text" >Make these moreish banana muffins for an easy breakfast or a snack on the go. They're also great for lunchboxes with the whole family.</p>
+                  <div class="button-second w-100 card-text text-center py-2"><i class="fas fa-utensils"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <!-- back content -->
+              <div class="card p-3">
+                <div class="card-block">
+                  <h4 class="card-title"><strong>Recipe</strong></h4>
+                  <h6 class="card-subtitle text-muted">★4.95 </h6>
+                </div>
+                <div class="card-block">
+                  <p class="card-text"><strong>STEP 1:</strong> Sift together the flour, baking powder, bicarbonate of soda and caster sugar with a big pinch of salt. In a separate bowl mix the melted butter, vanilla extract, eggs, mashed bananas and buttermilk.</p>
+                  <p class="card-text"><strong>STEP 2:</strong> Roughly mix together with a fork, being careful not to over-mix. Scatter in the chopped pecans, if using, then spoon the mixture into the muffin cases. Top with pecan halves, then bake for 20-25 mins, until golden brown.</p>
+                  <div class="information">
+                    <i class="fas fa-clock"></i><p>5min</p>
+                    <i class="fas fa-hat-chef"></i><p>Easy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END CARD FLIP -->
+<!----------------------------------------------------------------------------------------------->
   <div class="card-principal">
     <div class="row">
       <div class="col-4">
