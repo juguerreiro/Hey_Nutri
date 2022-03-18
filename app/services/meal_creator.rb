@@ -7,8 +7,8 @@ class MealCreator
     if @user.comorbidity.downcase == "none"
       42.times do
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE breakfast <> true").sample
-        carb = Carb.find_by_sql("SELECT * FROM proteins WHERE breakfast <> true").sample
-        fibra = Fibra.find_by_sql("SELECT * FROM proteins WHERE breakfast <> true").sample
+        carb = Carb.find_by_sql("SELECT * FROM carbs WHERE breakfast <> true").sample
+        fibra = Fibra.find(Fibra.pluck(:id).sample)
 
         Meal.create!(
           protein_id: protein.id,
