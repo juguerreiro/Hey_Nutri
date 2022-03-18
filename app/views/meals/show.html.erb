@@ -5,7 +5,11 @@
 
     <div class="profile-card js-profile-card">
       <div class="profile-card__img">
-        <%= cl_image_tag current_user.photo.key %>
+       <% if current_user.photo.attached? %>
+             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <% else %>
+          <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" class="img" width="100px">
+        <% end %>
       </div>
 
        <div class="profile-card__cnt js-profile-cnt">
