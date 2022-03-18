@@ -5,7 +5,7 @@ class MealCreator
 
   def create_meals
     if @user.comorbidity.downcase == "none"
-      42.times do
+      36.times do
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE breakfast <> true").sample
         carb = Carb.find_by_sql("SELECT * FROM carbs WHERE breakfast <> true").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
@@ -16,6 +16,20 @@ class MealCreator
           fibra_id: fibra.id,
           user_id: @user.id,
           calories_total: protein.calories + carb.calories + fibra.calories
+        )
+      end
+
+      18.times do
+        protein = Protein.where(breakfast: true).sample
+        carb = Carb.where(breakfast: true).sample
+        fibra = Fibra.all.sample
+
+        Meal.create!(
+          protein_id: protein.id,
+          carb_id: carb.id,
+          fibra_id: fibra.id,
+          user_id: @user.id,
+          calories_total: protein.calories + carb.calories
         )
       end
 
@@ -35,6 +49,19 @@ class MealCreator
         )
       end
 
+      18.times do
+        protein = Protein.where(breakfast: true).sample
+        carb = Carb.where(breakfast: true).sample
+        fibra = Fibra.all.sample
+
+        Meal.create!(
+          protein_id: protein.id,
+          carb_id: carb.id,
+          fibra_id: fibra.id,
+          user_id: @user.id,
+          calories_total: protein.calories + carb.calories
+        )
+      end
 
     elsif @user.comorbidity.downcase == "obesity"
       42.times do
@@ -48,6 +75,20 @@ class MealCreator
           fibra_id: fibra.id,
           user_id: @user.id,
           calories_total: protein.calories + carb.calories + fibra.calories
+        )
+      end
+
+      18.times do
+        protein = Protein.where(breakfast: true).sample
+        carb = Carb.where(breakfast: true).sample
+        fibra = Fibra.all.sample
+
+        Meal.create!(
+          protein_id: protein.id,
+          carb_id: carb.id,
+          fibra_id: fibra.id,
+          user_id: @user.id,
+          calories_total: protein.calories + carb.calories
         )
       end
     end

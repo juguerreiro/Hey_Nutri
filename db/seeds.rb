@@ -27,5 +27,5 @@ puts "database cleaned"
  end
 
  CSV.foreach(proteins, headers: :first_row) do |row|
-  Protein.create!(name: row.to_hash.values_at("Nome")[0], calories: row.to_hash.values_at("Calorias")[0].to_i, iron: row.to_hash.values_at("Ferro")[0].to_i, breakfast: row.to_hash.values_at("Breakfast")[0])
+  Protein.create!(name: row.to_hash.values_at("Nome")[0], calories: row.to_hash.values_at("Calorias")[0].to_i, iron: row.to_hash.values_at("Ferro")[0].to_i, breakfast: row.to_hash.values_at("Breakfast")[0], url: row.to_hash.values_at("Url")[0])
  end
