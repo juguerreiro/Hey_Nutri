@@ -35,7 +35,7 @@ class MealCreator
 
 
     elsif @user.comorbidity.downcase == "aneemia"
-      42.times do
+      36.times do
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE iron >= 2 AND breakfast <> true").sample
         carb = Carb.find_by_sql("SELECT * FROM carbs WHERE breakfast <> true").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)
@@ -64,7 +64,7 @@ class MealCreator
       end
 
     elsif @user.comorbidity.downcase == "obesity"
-      42.times do
+      36.times do
         protein = Protein.find_by_sql("SELECT * FROM proteins WHERE breakfast <> true").sample
         carb = Carb.find_by_sql("SELECT * FROM carbs WHERE sugar <= 20 AND breakfast <> true").sample
         fibra = Fibra.find(Fibra.pluck(:id).sample)

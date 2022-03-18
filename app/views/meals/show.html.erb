@@ -49,24 +49,24 @@
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
-          <% @breakfasts[0].each do |meal| %>
-            <li>•<%= meal.protein.name %> and <%= meal.carb.name %></li>
+          <% @breakfasts[0].each do |breakfast| %>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4 border-end border-start">
         <ul>
           <p class="snack">Lunch</p>
-          <% @lunchs_dinners[0].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[0].each do |lunch| %>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
           <p class="snack">dinner</p>
-          <% @lunchs_dinners[1].each do |meal| %>
-            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[1].each do |dinner| %>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -79,24 +79,24 @@
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
-          <% @breakfasts[1].each do |meal| %>
-            <li>•<%= meal.protein.name %> and <%= meal.carb.name %></li>
+          <% @breakfasts[1].each do |breakfast| %>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4 border-end border-start">
         <ul>
           <p class="snack">Lunch</p>
-          <% @lunchs_dinners[2].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[2].each do |lunch| %>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
           <p class="snack">dinner</p>
-          <% @lunchs_dinners[3].each do |meal| %>
-            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[3].each do |dinner| %>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -109,23 +109,23 @@
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
-          <% @breakfasts[2].each do |meal| %>
-            <li>•<%= meal.protein.name %> and <%= meal.carb.name %></li>
+          <% @breakfasts[2].each do |breakfast| %>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
           <% end %>
       </div>
       <div class="col-4 border-end border-start">
         <ul>
           <p class="snack">Lunch</p>
-          <% @lunchs_dinners[4].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[4].each do |lunch| %>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
           <p class="snack">dinner</p>
-          <% @lunchs_dinners[5].each do |meal| %>
-            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[5].each do |dinner| %>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -138,24 +138,24 @@
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
-          <% @breakfasts[3].each do |meal| %>
-            <li>•<%= meal.protein.name %> and <%= meal.carb.name %></li>
+          <% @breakfasts[3].each do |breakfast| %>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4 border-end border-start">
         <ul>
           <p class="snack">Lunch</p>
-          <% @lunchs_dinners[6].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[6].each do |lunch| %>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
           <p class="snack">dinner</p>
-          <% @lunchs_dinners[7].each do |meal| %>
-            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[7].each do |dinner| %>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -168,24 +168,24 @@
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
-          <% @breakfasts[4].each do |meal| %>
-            <li>•<%= meal.protein.name %> and <%= meal.carb.name %></li>
+          <% @breakfasts[4].each do |breakfast| %>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4 border-end border-start">
         <ul>
           <p class="snack">Lunch</p>
-          <% @lunchs_dinners[8].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[8].each do |lunch| %>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
           <p class="snack">dinner</p>
-          <% @lunchs_dinners[9].each do |meal| %>
-            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[9].each do |dinner| %>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -198,24 +198,24 @@
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
-          <% @breakfasts[5].each do |meal| %>
-            <li>•<%= meal.protein.name %> and <%= meal.carb.name %></li>
+          <% @breakfasts[5].each do |breakfast| %>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4 border-end border-start">
         <ul>
           <p class="snack">Lunch</p>
-          <% @lunchs_dinners[10].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[10].each do |lunch| %>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
           <p class="snack">dinner</p>
-          <% @lunchs_dinners[11].each do |meal| %>
-            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+          <% @lunchs_dinners[11].each do |dinner| %>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
