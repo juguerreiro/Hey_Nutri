@@ -17,6 +17,7 @@ class MealsController < ApplicationController
 
     @lunchs_dinners = lunch_dinner.each_slice(3).to_a
     @breakfasts = breakfast.each_slice(3).to_a
+
     # pegar todas as meals que não forem breakfast
 
   end
