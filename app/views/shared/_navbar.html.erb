@@ -21,25 +21,24 @@
           </li>
          
           <li class="nav-item dropdown">
-          <i class=“fas fa-user-circle”></i>
-           <% if current_user.photo.attached? %>
-             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <i class=“fas fa-user-circle”></i>
+            <% if current_user.photo.key %>
+              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
-              <img src="https://multimidia.gazetadopovo.com.br/media/info/2017/201710/plantas-problemas-saudavel.png" alt="" class="img">
+             <%= image_tag ("https://cdn3.vectorstock.com/i/thumb-large/32/12/default-avatar-profile-icon-vector-39013212.jpg"), id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%# <%= link_to "My profile", edit_user_session_path, class: "dropdown-item" %>
-              <%= link_to "My meals", meal_path(current_user), class: "dropdown-item" %>
-               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-              
+              <%=link_to "My meals", meal_path(current_user), class: "dropdown-item" %>
+              <%=link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
-        <% else %>
-          <li class="nav-item">
 
+        <% else %>
+            <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+            </li>
         <% end %>
       </ul>
     </div>
