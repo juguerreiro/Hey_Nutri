@@ -14,7 +14,7 @@
 
        <div class="profile-card__cnt js-profile-cnt">
           <div class="profile-card__name"><%=current_user.name %></div>
-          <div class="profile-card__txt"><i class="fa-solid fa-calendar"> </i><span><%=current_user.age%> years <span><i class="fa-solid fa-ruler"></i> <%=current_user.height%> cm<span></div>
+          <div class="profile-card__txt"><i class="fa-solid fa-calendar"></i><span><%=current_user.age%> years <span><i class="fa-solid fa-ruler"></i> <%=current_user.height%> cm<span></div>
 
       <div class="profile-card-inf">
         <div class="profile-card-inf__item">
@@ -27,7 +27,7 @@
           <div class="profile-card-inf__txt">BMR(kcal)</div>
         </div>
         <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title"><%=current_user.weight%></div>
+          <div class="profile-card-inf__title"><%=current_user.weight%> kg</div>
           <div class="profile-card-inf__txt"><i class="fa-solid fa-weight-scale"></i> </div>
         </div>
 
@@ -248,3 +248,7 @@
     <p class="text-end">Don't like your weekly meals? <%= link_to "click here", meal_path(current_user), method: :patch, data: { confirm: "Are you sure?", disable_with: "Creating new meals..." }, :class => "btn btn-info" %></p>
   </div>
 </div>
+
+<%= link_to  request.path, :class => "buttontop"  do %>
+  <i class="fa-solid fa-arrow-up"></i>
+<% end %>
