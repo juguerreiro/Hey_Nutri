@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<div class="container" background-color="red">
+<div class="car" style="background-color: white" >
   <h4 class="subtitle">Did you know?</h4><i class="fas fa-apple-crate"></i>
   <!-- STAR CAROUSEL -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -39,9 +39,12 @@
     </button>
   </div>
   <!-- END CAROUSEL -->
+  </div>
 
-  <!---------------------------------------------------------------------------------------------------- -->
-  <h4 class="subtitle mt-5 pt-5">Breakfast</h4>
+</div>
+ <!---------------------------------------------------------------------------------------------------- -->
+<div class="container" >
+  <h4 class="subtitle-meal mt-5 pt-5">Breakfast</h4>
   <!-- CARD FLIP -->
   <section>
     <div class="row cards">
@@ -158,7 +161,7 @@
 
   <!---------------------------------------------------------------------------------------------------- -->
 
-  <h4 class="subtitle">Lunch</h4>
+  <h4 class="subtitle-meal">Lunch</h4>
   <!-- CARD FLIP -->
   <section>
     <div class="row cards">
@@ -276,7 +279,7 @@
 
   <!---------------------------------------------------------------------------------------------------- -->
 
-  <h4 class="subtitle">Dinner</h4>
+  <h4 class="subtitle-meal">Dinner</h4>
   <!-- CARD FLIP -->
   <section>
     <div class="row cards">
@@ -398,5 +401,8 @@
     data-mapbox-markers-value="<%= @markers.to_json %>"
     data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+ </div>
 
-</div>
+
+
+
