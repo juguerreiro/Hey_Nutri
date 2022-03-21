@@ -1,23 +1,23 @@
-Nome,Calorias,Proteina,Colesterol,Carboidrato,Fibra,Ferro,Sodio,Gordura,Breakfast
-Tenderloin,206,22,73,0,0,3,57,12,FALSE
-Ribs,373,28,95,0,0,2,92,27,FALSE
-Beef liver,225,30,60,0,0,6,82,9,FALSE
-Meatballs,272,19,36,0,0,2,100,16,FALSE
-Chicken,243,24,110,0,0,2,56,16,FALSE
-Chicken (without skin),196,30,106,0,0,2,56,15,FALSE
-Roast Chicken,187,28,111,0,0,1,70,7,FALSE
-Hamburguer Meat,210,13,59,0,0,3,200,12,FALSE
-Grilled Sausage,245,18,76,0,0,1,300,19,FALSE
-Pork Chop,280,29,82,0,0,1,51,17,FALSE
-Ham,262,32,110,0,0,1,62,14,FALSE
-Kibbeh,254,15,38,0,0,2,200,16,FALSE
-Pork Belly,700,27,89,0,0,1,125,64,FALSE
-Fillet of Hake,122,27,91,0,0,0,40,1,FALSE
-Grilled Salmon,243,26,73,0,0,1,96,14,FALSE
-Grilled Shrimp,100,19,200,0,0,2,300,1,FALSE
-Scrambled Eggs,100,7,100,0,0,1,100,8,TRUE
-Minas Cheese,100,8,40,3,1,1,31,8,TRUE
-Turkey breast,80,10,40,1,0,0,200,1,TRUE
-Mozzarella,200,12,40,2,0,1,200,5,TRUE
-Buffalo Mozzarella,250,15,50,3,0,0,230,6,TRUE
-Ricotta Cheese,50,4,18,1,0,0,8,2,TRUE
+Nome,Calorias,Proteina,Colesterol,Carboidrato,Fibra,Ferro,Sodio,Gordura,Breakfast,Url
+Tenderloin,206,22,73,0,0,3,57,12,FALSE,https://www.delish.com/cooking/recipe-ideas/recipes/a55651/best-beef-tenderloin-recipe/
+Ribs,373,28,95,0,0,2,92,27,FALSE,https://www.delish.com/cooking/recipe-ideas/a20968995/how-to-cook-prime-rib/
+Beef liver,225,30,60,0,0,6,82,9,FALSE,https://www.delish.com/cooking/recipe-ideas/a19473587/best-beef-brisket-recipe/
+Meatballs,272,19,36,0,0,2,100,16,FALSE,https://www.delish.com/cooking/recipe-ideas/a25621572/italian-meatball-recipe/
+Chicken,243,24,110,0,0,2,56,16,FALSE,https://www.delish.com/cooking/recipe-ideas/a53483/best-grilled-chicken-breast-recipe/
+Chicken (without skin),196,30,106,0,0,2,56,15,FALSE,https://www.delish.com/cooking/recipe-ideas/a38773100/greek-chicken-souvlaki-recipe/
+Roast Chicken,187,28,111,0,0,1,70,7,FALSE,https://www.delish.com/search/?q=Roast+Chicken
+Hamburguer Meat,210,13,59,0,0,3,200,12,FALSE,https://www.delish.com/cooking/recipe-ideas/a28509043/air-fryer-hamburgers-recipe/
+Sausage balls,245,18,76,0,0,1,300,19,FALSE,https://www.delish.com/cooking/recipe-ideas/recipes/a54969/sausage-balls-recipe/
+Pork Chop,280,29,82,0,0,1,51,17,FALSE,https://www.delish.com/cooking/recipe-ideas/a28091838/air-fryer-pork-chops-recipe/
+Ham,262,32,110,0,0,1,62,14,FALSE,https://www.delish.com/cooking/recipe-ideas/a25323442/how-to-cook-spiral-ham-recipe/
+Kibbeh,254,15,38,0,0,2,200,16,FALSE,https://www.delish.com/cooking/recipe-ideas/a35048594/kibbeh-recipe/
+Pork Loin,700,27,89,0,0,1,125,64,FALSE,https://www.delish.com/cooking/recipe-ideas/recipes/a50738/stuffed-pork-loin-recipe/
+Fillet of Hake,122,27,91,0,0,0,40,1,FALSE,https://www.delish.com/kitchen-tools/kitchen-secrets/a1262/cooking-whole-fish/
+Grilled Salmon,243,26,73,0,0,1,96,14,FALSE,https://www.delish.com/cooking/recipe-ideas/recipes/a58718/best-grilled-salmon-fillets-recipe/
+Grilled Shrimp,100,19,200,0,0,2,300,1,FALSE,https://www.delish.com/cooking/recipe-ideas/recipes/a55657/easy-lemon-garlic-shrimp-recipe/
+Eggs Benedict,100,7,100,0,0,1,100,8,TRUE,https://www.delish.com/cooking/recipe-ideas/a26844972/eggs-benedict-recipe/
+Minas Cheese,100,8,40,3,1,1,31,8,TRUE,https://www.delish.com/cooking/recipe-ideas/a38688377/air-fryer-grilled-cheese-recipe/
+Turkey breast,80,10,40,1,0,0,200,1,TRUE,https://www.delish.com/cooking/recipe-ideas/a38134960/rosemary-sage-and-pecan-crusted-turkey-breast/
+Mozzarella,200,12,40,2,0,1,200,5,TRUE,https://www.delish.com/cooking/recipe-ideas/a38688377/air-fryer-grilled-cheese-recipe/
+Buffalo Mozzarella,250,15,50,3,0,0,230,6,TRUE,https://www.delish.com/cooking/recipe-ideas/recipes/a47912/mozzarella-red-pepper-bacon-skewers-recipe/
+Ricotta Cheese,50,4,18,1,0,0,8,2,TRUE,https://www.delish.com/cooking/recipe-ideas/a39205292/gnudi-recipe/

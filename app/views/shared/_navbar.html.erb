@@ -6,6 +6,8 @@
       <img src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1647007060/diet_fzsfk9.png" alt="">
     <% end %>
 
+     <p id="text-ct">Hey Nutri 🍴 </p>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,21 +21,26 @@
           <li class="nav-item">
             <%= link_to "Contact", "#", class: "nav-link" %>
           </li>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+         
           <li class="nav-item dropdown">
-          <i class=“fas fa-user-circle”></i>
-            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <i class=“fas fa-user-circle”></i>
+            <% if current_user.photo.key %>
+              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+             <%= image_tag ("https://cdn3.vectorstock.com/i/thumb-large/32/12/default-avatar-profile-icon-vector-39013212.jpg"), id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
+            
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%# <%= link_to "My profile", edit_user_session_path, class: "dropdown-item" %>
-              <%= link_to "My meals", "#", class: "dropdown-item" %>
-              
+              <%=link_to "My meals", meal_path(current_user), class: "dropdown-item" %>
+              <%=link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
-        <% else %>
-          <li class="nav-item">
 
+        <% else %>
+            <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+            </li>
         <% end %>
       </ul>
     </div>
