@@ -16,6 +16,7 @@ Meal.destroy_all
 Protein.destroy_all
 Carb.destroy_all
 Fibra.destroy_all
+Cooker.destroy_all
 
 puts "database cleaned"
  CSV.foreach(carbs, headers: :first_row) do |row|
@@ -29,3 +30,11 @@ puts "database cleaned"
  CSV.foreach(proteins, headers: :first_row) do |row|
   Protein.create!(name: row.to_hash.values_at("Nome")[0], calories: row.to_hash.values_at("Calorias")[0].to_i, iron: row.to_hash.values_at("Ferro")[0].to_i, breakfast: row.to_hash.values_at("Breakfast")[0], url: row.to_hash.values_at("Url")[0])
  end
+
+Cooker.create!(name: "Julia Guerreiro", address: "100 Rua Marques de olinda, Rio de Janeiro", phone: "987463132")
+Cooker.create!(name: "Carla Valdivia", address: "1200 Avenida Vieria Souto, Rio de Janeiro", phone: "987653792")
+Cooker.create!(name: "Luca Severo", address: "1274 Avenida Epitacio Pessoa, Rio de Janeiro", phone: "909643567")
+Cooker.create!(name: "Andre Menezes", address: "495 Rua Nascimento Silva, Rio de Janeiro", phone: "98571698")
+Cooker.create!(name: "Mariana Lima", address: "60 Rua Vinicius de Moraes, Rio de Janeiro", phone: "987462859")
+Cooker.create!(name: "Milene Cardoso", address: "50 Rua Visconde de Piraja, Rio de Janeiro", phone: "985462878")
+Cooker.create!(name: "Victor Brandao", address: "130 Praia de botafogo, Rio de Janeiro", phone: "987465482")
