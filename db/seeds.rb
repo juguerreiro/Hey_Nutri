@@ -33,7 +33,7 @@ puts "database cleaned"
 
 Cooker.create!(name: "Julia Guerreiro", address: "100 Rua Marques de olinda, Rio de Janeiro", phone: "987463132")
 Cooker.create!(name: "Carla Valdivia", address: "1200 Avenida Vieria Souto, Rio de Janeiro", phone: "987653792")
-Cooker.create!(name: "Luca Severo", address: "1274 Avenida Epitacio Pessoa, Rio de Janeiro", phone: "909643567")
+Cooker.create!(name: "Luca Severo", address: "112 Rua Maria Quitéria, Rio de Janeiro", phone: "909643567")
 Cooker.create!(name: "Andre Menezes", address: "495 Rua Nascimento Silva, Rio de Janeiro", phone: "98571698")
 Cooker.create!(name: "Mariana Lima", address: "60 Rua Vinicius de Moraes, Rio de Janeiro", phone: "987462859")
 Cooker.create!(name: "Milene Cardoso", address: "50 Rua Visconde de Piraja, Rio de Janeiro", phone: "985462878")
