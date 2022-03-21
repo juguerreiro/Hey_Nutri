@@ -1,65 +1,53 @@
+<header>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <img src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1647007060/diet_fzsfk9.png" alt="">
+      <% end %>
+    </div>
+  </div>
+</header>
 
 <!-------------------Profile----------------------------------------------------------------------->
  <div class="container">
 
-  <div class="wrapper">
+  <div class="profile-card__cnt js-profile-cnt">
+    <div class="profile-card__name"><%=current_user.name %>'s diet plan made by <strong>Hey Nutri!</strong></div>
 
-    <div class="profile-card js-profile-card">
-      <div class="profile-card__img">
-        <%= cl_image_tag current_user.photo.key %>
+    <div class="profile-pdf">
+      <div class="name-pdf">
+        <p><strong>About you</strong></p>
       </div>
-
-       <div class="profile-card__cnt js-profile-cnt">
-          <div class="profile-card__name"><%=current_user.name %></div>
-          <div class="profile-card__txt"><i class="fa-solid fa-calendar"> </i><span><%=current_user.age%> years <span><i class="fa-solid fa-ruler"></i> <%=current_user.height%> cm<span></div>
-
-      <div class="profile-card-inf">
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title"><%=  current_user.bmi.to_d.round(2,:truncate).to_f %></div>
-          <div class="profile-card-inf__txt">BMI</div>
+      <hr>
+        <div class="age-height">
+          <p><strong>Age: <%=current_user.age%> years&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height: <%=current_user.height%> cm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Weight: <%=current_user.weight%> kgs.</strong></p>
         </div>
-
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title"><%= current_user.bmr.to_d.round(2,:truncate).to_f%></div>
-          <div class="profile-card-inf__txt">BMR(kcal)</div>
+        <div class="bmi-bmr">
+          <p><strong>BMI: <%=  current_user.bmi.to_d.round(2,:truncate).to_f %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMR(kcal): <%= current_user.bmr.to_d.round(2,:truncate).to_f%></strong></p>
         </div>
-
-        <div class="profile-card-inf__item">
-          <div class="profile-card-inf__title"><%=current_user.weight%></div>
-          <div class="profile-card-inf__txt"><i class="fa-solid fa-weight-scale"></i> </div>
-        </div>
-
-
-      </div>
-
     </div>
   </div>
-  </div>
-  <div class= "welcome">
-    <h1>Hi <%= current_user.name %>! This is your plan: </h1>
-  </div>
-
-
 
   <!--------- MONDAY -------------------------------------------------------------------------->
 
-  <div class="click-here">
-  <p class="text-center">Download your Diet Plan in PDF! <%= link_to 'click here', meal_path(current_user, format: :pdf), :class => "btn btn-info" %><i class="fas fa-mouse-pointer"></i></p></div>
+<div class="allrow">
   <div class="card-principal">
     <div class="row">
       <div class="col-4">
         <ul>
+        <p><strong>MONDAY</strong></p>
+        <hr>
           <p class="snack">Breakfast</p>
-          <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
-          <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
-          <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
+          <li>  • <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
+          <li>  • <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
+          <li>  • <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
         </ul>
       </div>
       <div class="col-4 border-end border-start">
         <ul>
           <p class="snack">Lunch</p>
           <% @meals_week[0].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+            <li>  • <%= meal.protein.name %>, <%= meal.carb.name %> and <%= meal.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -67,7 +55,7 @@
         <ul>
           <p class="snack">Dinner</p>
           <% @meals_week[1].each do |meal| %>
-            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %> and <%= meal.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -75,10 +63,12 @@
   </div>
 
    <!--------- TUESDAY -------------------------------------------------------------------------->
-  <div class="card-principal">
+  <div class="card-principal-blue">
     <div class="row">
       <div class="col-4">
         <ul>
+        <p><strong>TUESDAY</strong></p>
+        <hr>
           <p class="snack">Breakfast</p>
           <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
           <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
@@ -89,13 +79,13 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @meals_week[2].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
-          <p class="snack">dinner</p>
+          <p class="snack">Dinner</p>
           <% @meals_week[3].each do |meal| %>
             <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
@@ -109,6 +99,8 @@
     <div class="row">
       <div class="col-4">
         <ul>
+        <p><strong>WEDNESDAY</strong></p>
+        <hr>
           <p class="snack">Breakfast</p>
           <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
           <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
@@ -118,13 +110,13 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @meals_week[4].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
-          <p class="snack">dinner</p>
+          <p class="snack">Dinner</p>
           <% @meals_week[5].each do |meal| %>
             <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
@@ -134,10 +126,12 @@
   </div>
 
    <!--------- THURSDAY -------------------------------------------------------------------------->
-  <div class="card-principal">
+  <div class="card-principal-blue">
     <div class="row">
       <div class="col-4">
         <ul>
+        <p><strong>THURSDAY</strong></p>
+        <hr>
           <p class="snack">Breakfast</p>
           <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
           <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
@@ -148,13 +142,13 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @meals_week[6].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
-          <p class="snack">dinner</p>
+          <p class="snack">Dinner</p>
           <% @meals_week[7].each do |meal| %>
             <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
@@ -168,6 +162,8 @@
     <div class="row">
       <div class="col-4">
         <ul>
+        <p><strong>FRIDAY</strong></p>
+        <hr>
           <p class="snack">Breakfast</p>
           <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
           <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
@@ -178,13 +174,13 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @meals_week[8].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
-          <p class="snack">dinner</p>
+          <p class="snack">Dinner</p>
           <% @meals_week[9].each do |meal| %>
             <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
@@ -194,10 +190,12 @@
   </div>
 
    <!--------- SATURDAY-------------------------------------------------------------------------->
-  <div class="card-principal">
+  <div class="card-principal-blue">
     <div class="row">
       <div class="col-4">
         <ul>
+        <p><strong>SATURDAY</strong></p>
+        <hr>
           <p class="snack">Breakfast</p>
          <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
           <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
@@ -208,65 +206,21 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @meals_week[10].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
+            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="col-4">
         <ul>
-          <p class="snack">dinner</p>
+          <p class="snack">Dinner</p>
           <% @meals_week[11].each do |meal| %>
             <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
           <% end %>
         </ul>
       </div>
     </div>
-  </div>
-
-   <!--------- SUNDAY-------------------------------------------------------------------------->
-  <div class="card-principal">
-    <div class="row">
-      <div class="col-4">
-        <ul>
-          <p class="snack">Breakfast</p>
-          <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
-          <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
-          <li>• <%= @protein_breakfast.sample.name %> and <%= @carbs_breakfast.sample.name %> </li>
-        </ul>
-      </div>
-      <div class="col-4 border-end border-start">
-        <ul>
-          <p class="snack">Lunch</p>
-          <% @meals_week[12].each do |meal| %>
-            <li>•<%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
-          <% end %>
-        </ul>
-      </div>
-      <div class="col-4">
-        <ul>
-          <p class="snack">dinner</p>
-          <% @meals_week[13].each do |meal| %>
-            <li>• <%= meal.protein.name %>, <%= meal.carb.name %>, <%= meal.fibra.name %></li>
-          <% end %>
-        </ul>
-      </div>
     </div>
   </div>
-
-   <!--------- SUNDAY-------------------------------------------------------------------------->
-  <div class="card-principal">
-    <div class="row">
-      <div class="col">
-        <p>Have fun</p>
-          <div class="center">
-            <img src="https://res.cloudinary.com/duhcsf9d8/image/upload/v1647368616/avocado_gif-url_la3w8w.gif" alt="Have fun!" style="width: 20%;">
-        </div>
-      </div>
-
-    </div>
   </div>
-
-  <div class="click-here">
-    <p class="text-end">Don't like your weekly meals? <%= link_to "click here", meal_path(current_user), method: :patch, data: { confirm: "Are you sure?", disable_with: "Creating new meals..." }, :class => "btn btn-info" %><i class="fas fa-mouse-pointer"></i></p>
   </div>
 </div>
