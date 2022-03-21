@@ -19,4 +19,23 @@
   font-size: 20px;
 }
 
+.buttontop {
+  
+display: inline-block;
+background-color: #146356;
+width: 50px;
+height: 50px;
+text-align: center;
+border-radius: 4px;
+position: float;
+bottom: 30px;
+right: 30px;
+transition: background-color .3s, opacity .5s, visibility .5s;
+z-index: 1000;
+color: white;
+font-size: xx-large;
+
+
+}
+
 
