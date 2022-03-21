@@ -40,17 +40,20 @@
   <div class= "welcome">
     <h1>Hi <%= current_user.name %>! This is your plan: </h1>
   </div>
-
+  <div class="info">
+    <p>Click on the protein to get the recipe<i class="fas fa-mouse-pointer"></i></p>
+  </div>
   <!--------- MONDAY -------------------------------------------------------------------------->
 
 
   <div class="card-principal">
     <div class="row">
+      <p class="weekday">Monday:</p>
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
           <% @breakfasts[0].each do |breakfast| %>
-            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank, :class => "black" %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
@@ -58,7 +61,7 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @lunchs_dinners[0].each do |lunch| %>
-            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank, :class => "black" %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -66,7 +69,7 @@
         <ul>
           <p class="snack">dinner</p>
           <% @lunchs_dinners[1].each do |dinner| %>
-            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank, :class => "black" %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -76,11 +79,12 @@
    <!--------- TUESDAY -------------------------------------------------------------------------->
   <div class="card-principal">
     <div class="row">
+    <p class="weekday">Tuesday:</p>
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
           <% @breakfasts[1].each do |breakfast| %>
-            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank, :class => "black" %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
@@ -88,7 +92,7 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @lunchs_dinners[2].each do |lunch| %>
-            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank, :class => "black" %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -96,7 +100,7 @@
         <ul>
           <p class="snack">dinner</p>
           <% @lunchs_dinners[3].each do |dinner| %>
-            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank, :class => "black" %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -106,18 +110,19 @@
    <!--------- WEDNESDAY-------------------------------------------------------------------------->
   <div class="card-principal">
     <div class="row">
+    <p class="weekday">Wednesday:</p>
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
           <% @breakfasts[2].each do |breakfast| %>
-            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank, :class => "black" %> and <%= breakfast.carb.name %></li>
           <% end %>
       </div>
       <div class="col-4 border-end border-start">
         <ul>
           <p class="snack">Lunch</p>
           <% @lunchs_dinners[4].each do |lunch| %>
-            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank, :class => "black" %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -125,7 +130,7 @@
         <ul>
           <p class="snack">dinner</p>
           <% @lunchs_dinners[5].each do |dinner| %>
-            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank, :class => "black" %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -135,11 +140,12 @@
    <!--------- THURSDAY -------------------------------------------------------------------------->
   <div class="card-principal">
     <div class="row">
+      <p class="weekday">Thursday:</p>
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
           <% @breakfasts[3].each do |breakfast| %>
-            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank, :class => "black" %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
@@ -147,7 +153,7 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @lunchs_dinners[6].each do |lunch| %>
-            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank, :class => "black" %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -155,7 +161,7 @@
         <ul>
           <p class="snack">dinner</p>
           <% @lunchs_dinners[7].each do |dinner| %>
-            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank, :class => "black" %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -165,11 +171,12 @@
    <!--------- FRIDAY-------------------------------------------------------------------------->
   <div class="card-principal">
     <div class="row">
+    <p class="weekday">Friday:</p>
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
           <% @breakfasts[4].each do |breakfast| %>
-            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank, :class => "black" %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
@@ -177,7 +184,7 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @lunchs_dinners[8].each do |lunch| %>
-            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank, :class => "black" %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -185,7 +192,7 @@
         <ul>
           <p class="snack">dinner</p>
           <% @lunchs_dinners[9].each do |dinner| %>
-            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank, :class => "black" %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -195,11 +202,12 @@
    <!--------- SATURDAY-------------------------------------------------------------------------->
   <div class="card-principal">
     <div class="row">
+    <p class="weekday">Saturday:</p>
       <div class="col-4">
         <ul>
           <p class="snack">Breakfast</p>
           <% @breakfasts[5].each do |breakfast| %>
-            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank %> and <%= breakfast.carb.name %></li>
+            <li>•<%= link_to breakfast.protein.name, breakfast.protein.url, target: :_blank, :class => "black" %> and <%= breakfast.carb.name %></li>
           <% end %>
         </ul>
       </div>
@@ -207,7 +215,7 @@
         <ul>
           <p class="snack">Lunch</p>
           <% @lunchs_dinners[10].each do |lunch| %>
-            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
+            <li>•<%= link_to lunch.protein.name, lunch.protein.url, target: :_blank, :class => "black" %>, <%= lunch.carb.name %>, <%= lunch.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -215,7 +223,7 @@
         <ul>
           <p class="snack">dinner</p>
           <% @lunchs_dinners[11].each do |dinner| %>
-            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
+            <li>• <%= link_to dinner.protein.name, dinner.protein.url, target: :_blank, :class => "black" %>, <%= dinner.carb.name %>, <%= dinner.fibra.name %></li>
           <% end %>
         </ul>
       </div>
@@ -225,6 +233,7 @@
    <!--------- SUNDAY-------------------------------------------------------------------------->
   <div class="card-principal">
     <div class="row">
+    <p class="weekday">Sunday:</p>
       <div class="col">
         <p>Have fun</p>
           <div class="center">
@@ -236,6 +245,6 @@
   </div>
 
   <div class="click-here">
-    <p class="text-end">Don't like your weekly meals? <%= link_to "click here", meal_path(current_user), method: :patch, data: { confirm: "Are you sure?", disable_with: "Creating new meals..." }, :class => "btn btn-info" %><i class="fas fa-mouse-pointer"></i></p>
+    <p class="text-end">Don't like your weekly meals? <%= link_to "click here", meal_path(current_user), method: :patch, data: { confirm: "Are you sure?", disable_with: "Creating new meals..." }, :class => "btn btn-info" %></p>
   </div>
 </div>
