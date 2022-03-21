@@ -1,0 +1,4 @@
+meta_product_name: "Hey Nutri"
+meta_title: "HeyNutri - Change your life with selected meals"
+meta_description: "Generate personalized meals"
+meta_image: "heynutri.png" # should exist in `app/assets/images/`
